@@ -22,7 +22,7 @@ The aim of this study is to propose an effective LSTM model that can provide sto
 # RESEARCH QUESTIONS / HYPOTHESIS TESTING
 The study used the Dickey-Fuller Test to check the stationary nature of the data. The test statistic used in the augmented Dickey-Fuller statistic is a negative number. The higher the negative number, the stronger the rejection of the hypothesis that there is a unit root at some level of confidence.
 
-# HYPOTHESIS TESTING(Research Question 2)
+# HYPOTHESIS TESTING(Research Question 1)
 Is the data stationary or non-stationary?
 The following are the test hypotheses:
 Null hypothesis (H0): The time series data is non-stationary. 
