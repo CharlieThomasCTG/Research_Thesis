@@ -2,6 +2,35 @@
 #![image](https://github.com/charliethomasct82/Research_Thesis/assets/93368865/0ff1f29c-11a3-4349-bc54-8d6400e99b53)
 
 
-Stock price prediction has welcomed the development of advanced capabilities due to the speedy development of machine learning techniques and Artificial Intelligence, Improved computational speed, and ever-increasing data Availability. The stock market has become more volatile and complex due to access to investment opportunities is easier in current times. This research compares three different types of LSTM architecture(single-layer, multi-layer, and bi-directional) to predict the stock price of Indian banking stock, Yes Bank Ltd. The Structure of the Thesis is as follows: Chapter is 1, an introduction to the Thesis carried out; Chapter 2 , highlights the review of the Literature in the studied area; Chapter 3, explores the Research Methodology; Section 4, describes the Analysis of the study; Section 5, Results of the analysis are discussed; conclusions and future work are presented in Chapter 6, followed by references, and appendices.
+# PROBLEM STATEMENT
+Yes Bank was incorporated in the year 1999 by Ashok Kapur, Harkirat Singh and Rana Kapoor. Yes Bank’s Non-banking financial business has a shareholding pattern of 25 % of the business with former named incorporators and 75 % held by Rabo Bank from the Netherlands. Yes Bank Ltd. was listed on the BSE, Bombay Stock Exchange in May 2005 and also had a follow-up public offering in July 2020. The Bank faced a steep fall in stock price from mid-2019 because of mismanagement of loan lending, governance issues, false Assurance and lack of insight by the management. The Yes Bank collapsed financially and the government and other banks restructured the Yes Bank and helped it revamp its operation in 2019-20. Yes Bank Ltd. has fallen from an all-time high to an all-time in the last 5 years. This led to an influx of retail and corporate investors hoarding the shares of the bank. The turnaround of the bank, traders and investors' anticipation about the stock price and the high volume of the stock’s trade on the stock exchange motivated this study to develop an LSTM model that can predict the stock price of Yes Bank.
+The research aims to compare the different forms of LSTM architectures such as Single-layer LSTM, bi-directional LSTM, and Multi-layer LSTM to predict the future price of Yes Bank Ltd. The study will utilize Yes Bank Ltd. Historical price data. Yes Bank has been one of the most traded stocks on the NSE and BSE, the stock exchange of  India. Investors(retail and corporate) have shown keen interest in the stock for long-term as well as short-term investments. The research aims to propose a model that would be able to predict the future price as well as trend in the moment of the stock. The research proposes to develop an LSTM model that will be less complex and would require historical price data to predict the future price of the stock.
+1.3	OBJECTIVES AND AIM
+The aim of this study is to propose an effective LSTM model that can provide stock price prediction with low variability. This will be achieved by comparing the performance of various LSTM architectures such as Single-layer LSTM, bi-directional LSTM, and Multi-layer LSTM to predict the future price of Yes Bank Ltd. To accomplish this, the research will incorporate predictors such as the daily historical prices such as Open price, Close price, High price and Low price on the given day. The research proposes to develop an LSTM model that will be less complex and would require historical price data to predict the future price of the stock. The research objectives are as follows: 
+1.	The examination of patterns among various predictors, which comprises historical fundamental indicators like historical prices (open, high, low, close).
+2.	A thorough comparison of the performance of various predictive models such as single-layer LSTM, bi-directional LSTM, and multi-layer LSTM.
+3.	To run the trial for hyperparameter tuning to improve the performance of the model.
+4.	To predict the trend of the stock.
+   
+# RESEARCH QUESTIONS
+1.	Is the data stationary or non-stationary?
 
-The study uses predictors such as Historical prices(open, close, high, and low). Historical price information has been extracted from the Yahoo finance data by using the yfinance library for the period from 2005-05-07 to 2023-08-09. The bi-variate analysis highlights the high correlation between historical price features. Hence Date and Close price were utilized for further analysis. Data was transformed using a combination of Log-square root transformers to make the data stationary. A new Data set with features Date, input_1, Input_2, Input_3 and Target was created by the feature engineering process. Three baseline models and 45 experimental models with different combinations of batch size and number of epochs were built and compared on the performance based on MSE(Loss on validation data). A bidirectional LSTM with 10 epochs and 64 batch size was selected for hyperparameter tuning because of the low score of MSE(validation data). The hyperparameter tuning will be performed to get the most optimized model to predict the stock price. Hyperparameter tuning has improved the Loss by 88.28% from 322.02 to 37.88 (refer to Plot 4.9.1). A tuned Bi-directional model was proposed to be implemented on unseen/ test data. The proposed model was able to predict the price with a loss of 25.024 and within the average value of 5.002(refer to Plot 4.10.1)(refer to table 5.3.1). The Proposed model was also able to predict the trend closely to the real trend(refer to plot 5.3.1). This paper established that simple LSTM architecture such as single-layer LSTM was less efficient than complex LSTM architecture such as multi-layer LSTM and bi-directional LSTM. This study also established that bi-directional LSTM was able to predict the trend of the moment of the stock efficiently(refer to plot 5.3.1).
+The following are the test hypotheses:
+
+Null hypothesis (H0): The time series data is non-stationary. 
+
+Alternate hypothesis (H1): The time series is stationary (or trend-stationary).
+
+2.	Did the Transformation of the data change the nature of the data to stationary?
+
+The following are the test hypotheses:
+
+Null hypothesis (H0): The applied transformation technique on time series data did not change the characteristics to stationary. 
+
+Alternate hypothesis (H1): The Applied transformation technique on time series data changed the characteristics to stationary.  (or trend-stationary).
+Research question 1 and 2 answered in section 4.4, Hypothesis testing
+3.	Was the proposed model able to predict the trend of the stock on unseen data?
+Research Question is Answered in Section 5.5 and  Plot 5.5.1
+
+# STUDY'S SCOPE
+The analysis of Yes Bank Ltd.'s stock examined its historical prices such as Open, Close, High, and low to propose an LSTM model that can predict the stock price. The study solely relied on Historical price information and information such as technical indicators, macroeconomic data, market sentiments etc. has not been incorporated. The study did not compare other machine learning algorithms and statistical models but three LSTM algorithms such as single-layer LSTM, multi-layer LSTM and Bi-directional LSTM.
