@@ -1,6 +1,6 @@
 # Stock Price Prediction using LSTM
 
-#![image](https://github.com/charliethomasct82/Research_Thesis/assets/93368865/fc8043a8-809e-45c7-bb00-482527850239)
+# ![image](https://github.com/charliethomasct82/Research_Thesis/assets/93368865/fc8043a8-809e-45c7-bb00-482527850239)
 
 # ![image](https://github.com/charliethomasct82/Research_Thesis/assets/93368865/bba15e9e-fd51-48e7-ae33-b62f59cf3c37)
 
@@ -70,7 +70,7 @@ Initially, three baseline models were built, namely single-layer LSTM, multi-lay
 
 An experimental Bi-directional model with epochs:10 and batch size: 64 was selected for hyperparameter tunning because it has the lowest Loss scores on the validation dataset of 322.02. Hyperparameter tuning has improved the Loss by 88.28% from 322.02 to 37.88 (refer to Plot 4.9.1). Hence, a Bi-directional tuned Model was implemented on the test data set. Hyperparameters of the proposed model are as follows: Epochs:10, batch size:64, Dropout rate: 0.4, learning rate: 0.0013489304109835225, Number of layers:12. Input units are the number of RNN units in each layer. input_unit1: 80, input_unit2: 32, input_unit3: 16, input_unit4: 16, input_unit5: 16, input_unit6: 16, input_unit7: 16, input_unit8: 16, input_unit9: 16, input_unit10: 16, input_unit11: 16, input_unit12: 16(refer to Table 4.8.1, trial 1). Adam optimizer was selected based on understanding from the literature review.  The proposed model predicted the stock price very close to actual values with Loss and RMSE scores of 25.004 and 5.02, and also captured the moment of the stock very well as discussed in Chapter 5, Results.
 
-The proposed model was implemented on the unseen test data containing Yes Bank’s share price for the period from 03-01-2020 to 04-08-2023. The proposed model was able to predict the price with a loss of 25.024 and within the average value of 5.002(refer to Plot 4.10.1)
+The proposed model was implemented on the unseen test data containing Yes Bank’s share price for the period from 03-01-2020 to 04-08-2023. The proposed model was able to predict the price with a loss Score of 25.024.
                                                            
 
 
