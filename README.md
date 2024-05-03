@@ -3,8 +3,8 @@
 #![image](https://github.com/charliethomasct82/Research_Thesis/assets/93368865/fc8043a8-809e-45c7-bb00-482527850239)
 
 # ![image](https://github.com/charliethomasct82/Research_Thesis/assets/93368865/bba15e9e-fd51-48e7-ae33-b62f59cf3c37)
-# ![image](https://github.com/charliethomasct82/Research_Thesis/assets/93368865/c7594d17-68e6-4d0f-b8ff-1c1426caefc6)
-#![image](https://github.com/charliethomasct82/Research_Thesis/assets/93368865/d8474cdc-59ba-4e31-a70d-cb18488a4570)
+
+
 # ![image](https://github.com/charliethomasct82/Research_Thesis/assets/93368865/6d5ad349-3583-48d3-9597-1f436de993d1)
 
 
@@ -19,28 +19,31 @@ The aim of this study is to propose an effective LSTM model that can provide sto
 3.	To run the trial for hyperparameter tuning to improve the performance of the model.
 4.	To predict the trend of the stock.
    
-# RESEARCH QUESTIONS
-4.4	HYPOTHESIS TESTING
+# RESEARCH QUESTIONS / HYPOTHESIS TESTING
 The study used the Dickey-Fuller Test to check the stationary nature of the data. The test statistic used in the augmented Dickey-Fuller statistic is a negative number. The higher the negative number, the stronger the rejection of the hypothesis that there is a unit root at some level of confidence.
-4.4.1	HYPOTHESIS TESTING(Research Question 1)
-1. Is the data stationary or non-stationary?
+
+# HYPOTHESIS TESTING(Research Question 2)
+Is the data stationary or non-stationary?
 The following are the test hypotheses:
 Null hypothesis (H0): The time series data is non-stationary. 
 Alternate hypothesis (H1): The time series is stationary (or trend-stationary).
 
 First, in the below plot 4.4.1.1, the rolling mean is increasing but the standard deviation is more or less constant. The test Statistics of -1.519420  is greater than the critical value at 1%,5% and 10%(refer to table 4.4.1.1). Therefore, It cannot be assumed with any confidence that this is a stationary series Moreover,  the p-value is higher than the 1%,5% and 10% threshold(refer to table 4.4.1.1). Hence the null hypothesis cannot be rejected at any confidence level. Meaning that the Dickey-Fuller test verifies that the time series is non-stationary.
- 
+# ![image](https://github.com/charliethomasct82/Research_Thesis/assets/93368865/c7594d17-68e6-4d0f-b8ff-1c1426caefc6)
 
 
 We applied the log transformation and then we applied the square root transformation to make the data stationary. Then, we conducted the dickey-fuller test to check whether the non-stationary data changed to stationary data.
-4.4.2	HYPOTHESIS TESTING(Research Question 2)
 
-2. Did the transformation of the data change the nature of the data to stationary?
+# HYPOTHESIS TESTING(Research Question 2)
+Did the transformation of the data change the nature of the data to stationary?
 The following are the test hypotheses:
-Null hypothesis (H0): The applied transformation technique on time series data did not change the characteristics to stationary. 
-Alternate hypothesis (H1): The applied transformation technique on time series data changed the characteristics of stationery.
-First, in the below plot 4.4.1.1, the rolling mean and standard deviation are more or less consistent with each other’s movement over the period. The test statistic of -1.655430e+01 is a lot lower than the critical value at 1%,5%, and 10%(refer to Table 4.4.1.2). Therefore, It can be assumed with more than 99% confidence that this is a stationary series. Moreover,  the p-value is smaller than the 1%,5% and 10% threshold, thus the null hypothesis is rejected, meaning that the Dickey-Fuller test verifies that the time series is stationary.
 
+Null hypothesis (H0): The applied transformation technique on time series data did not change the characteristics to stationary. 
+
+Alternate hypothesis (H1): The applied transformation technique on time series data changed the characteristics of stationery.
+
+First, in the below plot 4.4.1.1, the rolling mean and standard deviation are more or less consistent with each other’s movement over the period. The test statistic of -1.655430e+01 is a lot lower than the critical value at 1%,5%, and 10%(refer to Table 4.4.1.2). Therefore, It can be assumed with more than 99% confidence that this is a stationary series. Moreover,  the p-value is smaller than the 1%,5% and 10% threshold, thus the null hypothesis is rejected, meaning that the Dickey-Fuller test verifies that the time series is stationary.
+#![image](https://github.com/charliethomasct82/Research_Thesis/assets/93368865/d8474cdc-59ba-4e31-a70d-cb18488a4570)
  
 
 
