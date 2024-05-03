@@ -28,7 +28,9 @@ The following are the test hypotheses:
 Null hypothesis (H0): The applied transformation technique on time series data did not change the characteristics to stationary. 
 
 Alternate hypothesis (H1): The Applied transformation technique on time series data changed the characteristics to stationary.  (or trend-stationary).
+
 Research question 1 and 2 answered in section 4.4, Hypothesis testing
+
 3.	Was the proposed model able to predict the trend of the stock on unseen data?
 Research Question is Answered in Section 5.5 and  Plot 5.5.1
 
