@@ -46,40 +46,9 @@ The analysis of Yes Bank Ltd.'s stock examined its historical prices such as Ope
 
 
 # Proposed Model: Bi-directional LSTM Model
-Model: "sequential"
-_________________________________________________________________
- Layer (type)                   Output Shape              Param #   
-=================================================================
- bidirectional   (Bidirectional)  (None, 3, 80)            52480                                                                   
-                                                                 
- bidirectional_1 (Bidirectional)  (None, 3, 32)          49408                                                                 
-                                                                 
- bidirectional_2 (Bidirectional)  (None, 3, 16)          10368                                                                 
-                                                                 
- bidirectional_3 (Bidirectional)  (None, 3, 16)          6272      
-                                                                                                                         
- bidirectional_4 (Bidirectional)  (None, 3, 16)          6272      
-                                                                                                                             
- bidirectional_5 (Bidirectional) (None, 3, 16)           6272                                                                  
-                                                                 
- bidirectional_6 (Bidirectional)  (None, 3, 16)          6272      
-                                                                                                                             
- bidirectional_7 (Bidirectional)  (None, 3, 16)          6272      
-                                                                                                                             
- bidirectional_8 (Bidirectional)  (None, 3, 16)          6272      
-                                                                                                                             
- bidirectional_9 (Bidirectional)  (None, 3, 16)          6272                                                                                                                              
- bidirectional_10 (Bidirectional)  (None, 3, 16)        6272      
-                                                                                                                            
- bidirectional_11 (Bidirectional)  (None, 3, 16)        6272      
-                                                                                                                         
- dropout (Dropout)           (None, 3, 16)                     0                                                                        
- bidirectional_12 (Bidirectional)  (None, 16)             6272      
-                                                                                                                        
- dropout_1 (Dropout)         (None, 16)                        0                                                                        
- dense (Dense)               (None, 1)                              33                                                                         
-=================================================================
-Total params: 175,009, Trainable params: 175,009, Non-trainable params: 0
+![image](https://github.com/charliethomasct82/Research_Thesis/assets/93368865/08bb3863-31e5-4563-b90a-27a8453c8b69)
+
+
 
 # DISCUSSION AND CONCLUSION
 This research incorporated the historical price information of the Yes Bank Ltd data from the period 2005-07-12 to 2023-08-09. There has been a consistent rise in the price from the year 2005 to 2008 then stock price experienced a consistent fall from the first quarter of the year 2008 to mid-2009 due to the effect of sub-prime loan risk. The stock experienced a consistent rise in price from mid-2009 to the first quarter-2019 then the stock experienced a deep fall in price till mid-2020. The stock has been trading range-bound since mid-2019. Bi-variate analysis establishes a strong correlation among features. The existence of the high correlation resulted in the elimination of highly correlated variables. The date and Close price were selected for further analysis. Open price, High price and Low price were eliminated from the data set. The Dickey-Fuller test established the presence of non-stationary elements in the data. Hence, log-sqrt transformation was successfully applied to remove the non-stationary element. An intuitive approach was adopted to create a new data set by utilising the previous three days' close prices to predict the close price of the next day. The literature review laid the foundation to research the ability of the LSTM as an efficient architecture to predict future stock prices. After analysing various scientific literature regarding the application of machine learning, this study was able to understand that various studies have appreciated the ability of the LSTM to predict the stock price more efficiently than other algorithms.
