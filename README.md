@@ -1,4 +1,5 @@
 # Stock Price Prediction using LSTM
+# ![stock_price_prediction](https://github.com/charliethomasct82/Research_Thesis/assets/93368865/ee2c85be-0aa8-41d7-8634-60d45adb2366)
 
 # ![image](https://github.com/charliethomasct82/Research_Thesis/assets/93368865/fc8043a8-809e-45c7-bb00-482527850239)
 
