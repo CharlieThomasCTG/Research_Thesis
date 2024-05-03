@@ -20,26 +20,30 @@ The aim of this study is to propose an effective LSTM model that can provide sto
 4.	To predict the trend of the stock.
    
 # RESEARCH QUESTIONS
-1.	Is the data stationary or non-stationary?
-
+4.4	HYPOTHESIS TESTING
+The study used the Dickey-Fuller Test to check the stationary nature of the data. The test statistic used in the augmented Dickey-Fuller statistic is a negative number. The higher the negative number, the stronger the rejection of the hypothesis that there is a unit root at some level of confidence.
+4.4.1	HYPOTHESIS TESTING(Research Question 1)
+1. Is the data stationary or non-stationary?
 The following are the test hypotheses:
-
 Null hypothesis (H0): The time series data is non-stationary. 
-
 Alternate hypothesis (H1): The time series is stationary (or trend-stationary).
 
-2.	Did the Transformation of the data change the nature of the data to stationary?
+First, in the below plot 4.4.1.1, the rolling mean is increasing but the standard deviation is more or less constant. The test Statistics of -1.519420  is greater than the critical value at 1%,5% and 10%(refer to table 4.4.1.1). Therefore, It cannot be assumed with any confidence that this is a stationary series Moreover,  the p-value is higher than the 1%,5% and 10% threshold(refer to table 4.4.1.1). Hence the null hypothesis cannot be rejected at any confidence level. Meaning that the Dickey-Fuller test verifies that the time series is non-stationary.
+ 
 
+
+We applied the log transformation and then we applied the square root transformation to make the data stationary. Then, we conducted the dickey-fuller test to check whether the non-stationary data changed to stationary data.
+4.4.2	HYPOTHESIS TESTING(Research Question 2)
+
+2. Did the transformation of the data change the nature of the data to stationary?
 The following are the test hypotheses:
-
 Null hypothesis (H0): The applied transformation technique on time series data did not change the characteristics to stationary. 
+Alternate hypothesis (H1): The applied transformation technique on time series data changed the characteristics of stationery.
+First, in the below plot 4.4.1.1, the rolling mean and standard deviation are more or less consistent with each other’s movement over the period. The test statistic of -1.655430e+01 is a lot lower than the critical value at 1%,5%, and 10%(refer to Table 4.4.1.2). Therefore, It can be assumed with more than 99% confidence that this is a stationary series. Moreover,  the p-value is smaller than the 1%,5% and 10% threshold, thus the null hypothesis is rejected, meaning that the Dickey-Fuller test verifies that the time series is stationary.
 
-Alternate hypothesis (H1): The Applied transformation technique on time series data changed the characteristics to stationary.  (or trend-stationary).
+ 
 
-Research question 1 and 2 answered in section 4.4, Hypothesis testing
 
-3.	Was the proposed model able to predict the trend of the stock on unseen data?
-Research Question is Answered in Section 5.5 and  Plot 5.5.1
 
 # STUDY'S SCOPE
 The analysis of Yes Bank Ltd.'s stock examined its historical prices such as Open, Close, High, and low to propose an LSTM model that can predict the stock price. The study solely relied on Historical price information and information such as technical indicators, macroeconomic data, market sentiments etc. has not been incorporated. The study did not compare other machine learning algorithms and statistical models but three LSTM algorithms such as single-layer LSTM, multi-layer LSTM and Bi-directional LSTM.
@@ -51,7 +55,16 @@ The analysis of Yes Bank Ltd.'s stock examined its historical prices such as Ope
 
 
 # DISCUSSION AND CONCLUSION
-This research incorporated the historical price information of the Yes Bank Ltd data from the period 2005-07-12 to 2023-08-09. There has been a consistent rise in the price from the year 2005 to 2008 then stock price experienced a consistent fall from the first quarter of the year 2008 to mid-2009 due to the effect of sub-prime loan risk. The stock experienced a consistent rise in price from mid-2009 to the first quarter-2019 then the stock experienced a deep fall in price till mid-2020. The stock has been trading range-bound since mid-2019. Bi-variate analysis establishes a strong correlation among features. The existence of the high correlation resulted in the elimination of highly correlated variables. The date and Close price were selected for further analysis. Open price, High price and Low price were eliminated from the data set. The Dickey-Fuller test established the presence of non-stationary elements in the data. Hence, log-sqrt transformation was successfully applied to remove the non-stationary element. An intuitive approach was adopted to create a new data set by utilising the previous three days' close prices to predict the close price of the next day. The literature review laid the foundation to research the ability of the LSTM as an efficient architecture to predict future stock prices. After analysing various scientific literature regarding the application of machine learning, this study was able to understand that various studies have appreciated the ability of the LSTM to predict the stock price more efficiently than other algorithms.
+Yesbank’s historical price data were retrieved from Yahoo finance data using the yfinance library in Python. The initial Features utilised for the rudimentary stage of analysis were the Close price, Open price, High price and Low price of the Yes bank for the period from 2005-05-12 to 2023-08-09.
 
-Initially, A bi-directional LSTM model was selected from 45 experimental models and 3 baseline models for its low Loss score on validation data of 322.02. Hyperparameter tuning has improved the Loss by 88.28% from 322.02 to 37.88 (refer to Plot 4.9.1). Hence, a Bi-directional tuned Model was selected to implement on the test data set. The proposed model was implemented on the unseen test data set containing Yes Bank’s share price for the period from 03-01-2020 to 04-08-2023. The proposed model was able to predict the price with a loss of 25.024 and within the average value of 5.002(refer to Plot 4.10.1)(refer to table 5.3.1). The Proposed model was also able to predict the trend closely to the real trend(refer to plot 5.3.1). This paper established that simple LSTM architecture such as single-layer LSTM was less efficient than complex LSTM architecture such as multi-layer LSTM and bi-directional LSTM. The study also established that bi-directional LSTM was able to predict the trend of the moment of the stock efficiently(refer to plot 5.3.1). 
+Pandas profiling library was utilized to conduct univariate, bi-variate analysis. Uni-variate analysis established a linear upward trend till 2018 and then there was a price crash till mid-2020. Since mid-2020, the price has been experiencing a sideways movement as discussed in section 4.2.1. Bi-variate analysis finds an existence of high co-relation among the features. The stock's closing price was selected as a feature to be incorporated into the study because of the high correlation among the features. 
+Hypothesis testing was done on the Yes bank stock price data set to determine if the data was stationary or non-stationary. The Dickey-Fuller test was used as a statistical tool to perform hypothesis testing. The test established that data is non-stationary with more than 99% confidence. Log transformation and then square transformation were performed to flatten it. Dicky-fuller test confirmed that transformed data is stationary with more than 99% confidence. An intuitive method was implemented to create a new data set from transformed data. The previous three days' close prices were used to predict the close price of the next day. The previous three day’s price was used as the explanatory variable and every 4th-day’s price was treated as the predictor variable. 80% per cent of the data was kept as Training data and 20% of the data was treated as test data. 30% of the data in the training dataset was treated as Validation data. Training and test data were converted into a NumPy array to feed into the LSTM model.
+
+Initially, three baseline models were built, namely single-layer LSTM, multi-layer LSTM and bi-directional LSTM. All three models were built with a number of RNN units=128, Adam as optimizer with a learning rate of 0.004.15 experiments were conducted on each baseline model. Hence total of 45 experiments were conducted. One best model was selected from the experiments conducted on three baseline models with different combinations of the number of epochs[10,20,50,100] and batch size[32,64,128,256]. Loss scores on the validation dataset of the baseline model and selected Experimental model were compared. 
+
+An experimental Bi-directional model with epochs:10 and batch size: 64 was selected for hyperparameter tunning because it has the lowest Loss scores on the validation dataset of 322.02. Hyperparameter tuning has improved the Loss by 88.28% from 322.02 to 37.88 (refer to Plot 4.9.1). Hence, a Bi-directional tuned Model was implemented on the test data set. Hyperparameters of the proposed model are as follows: Epochs:10, batch size:64, Dropout rate: 0.4, learning rate: 0.0013489304109835225, Number of layers:12. Input units are the number of RNN units in each layer. input_unit1: 80, input_unit2: 32, input_unit3: 16, input_unit4: 16, input_unit5: 16, input_unit6: 16, input_unit7: 16, input_unit8: 16, input_unit9: 16, input_unit10: 16, input_unit11: 16, input_unit12: 16(refer to Table 4.8.1, trial 1). Adam optimizer was selected based on understanding from the literature review.  The proposed model predicted the stock price very close to actual values with Loss and RMSE scores of 25.004 and 5.02, and also captured the moment of the stock very well as discussed in Chapter 5, Results.
+
+The proposed model was implemented on the unseen test data containing Yes Bank’s share price for the period from 03-01-2020 to 04-08-2023. The proposed model was able to predict the price with a loss of 25.024 and within the average value of 5.002(refer to Plot 4.10.1)
+                                                           
+
 
