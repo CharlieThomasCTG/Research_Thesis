@@ -1,7 +1,8 @@
 # Stock Price Prediction using LSTM
 # ![stock_price_prediction](https://github.com/charliethomasct82/Research_Thesis/assets/93368865/ee2c85be-0aa8-41d7-8634-60d45adb2366)
 
-# ![image](https://github.com/charliethomasct82/Research_Thesis/assets/93368865/fc8043a8-809e-45c7-bb00-482527850239)
+# ![image](https://github.com/CharlieThomasCTG/Research_Thesis/assets/93368865/6ed1b089-1309-4924-a69c-80a9bc3c5325)
+
 
 # ![image](https://github.com/charliethomasct82/Research_Thesis/assets/93368865/bba15e9e-fd51-48e7-ae33-b62f59cf3c37)
 
@@ -13,7 +14,8 @@
 # PROBLEM STATEMENT
 Yes Bank was incorporated in the year 1999 by Ashok Kapur, Harkirat Singh and Rana Kapoor. Yes Bank’s Non-banking financial business has a shareholding pattern of 25 % of the business with former named incorporators and 75 % held by Rabo Bank from the Netherlands. Yes Bank Ltd. was listed on the BSE, Bombay Stock Exchange in May 2005 and also had a follow-up public offering in July 2020. The Bank faced a steep fall in stock price from mid-2019 because of mismanagement of loan lending, governance issues, false Assurance and lack of insight by the management. The Yes Bank collapsed financially and the government and other banks restructured the Yes Bank and helped it revamp its operation in 2019-20. Yes Bank Ltd. has fallen from an all-time high to an all-time in the last 5 years. This led to an influx of retail and corporate investors hoarding the shares of the bank. The turnaround of the bank, traders and investors' anticipation about the stock price and the high volume of the stock’s trade on the stock exchange motivated this study to develop an LSTM model that can predict the stock price of Yes Bank.
 The research aims to compare the different forms of LSTM architectures such as Single-layer LSTM, bi-directional LSTM, and Multi-layer LSTM to predict the future price of Yes Bank Ltd. The study will utilize Yes Bank Ltd. Historical price data. Yes Bank has been one of the most traded stocks on the NSE and BSE, the stock exchange of  India. Investors(retail and corporate) have shown keen interest in the stock for long-term as well as short-term investments. The research aims to propose a model that would be able to predict the future price as well as trend in the moment of the stock. The research proposes to develop an LSTM model that will be less complex and would require historical price data to predict the future price of the stock.
-1.3	OBJECTIVES AND AIM
+
+# 1.3	OBJECTIVES AND AIM
 The aim of this study is to propose an effective LSTM model that can provide stock price prediction with low variability. This will be achieved by comparing the performance of various LSTM architectures such as Single-layer LSTM, bi-directional LSTM, and Multi-layer LSTM to predict the future price of Yes Bank Ltd. To accomplish this, the research will incorporate predictors such as the daily historical prices such as Open price, Close price, High price and Low price on the given day. The research proposes to develop an LSTM model that will be less complex and would require historical price data to predict the future price of the stock. The research objectives are as follows: 
 1.	The examination of patterns among various predictors, which comprises historical fundamental indicators like historical prices (open, high, low, close).
 2.	A thorough comparison of the performance of various predictive models such as single-layer LSTM, bi-directional LSTM, and multi-layer LSTM.
